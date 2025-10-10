@@ -10,7 +10,7 @@ permissions:
 jobs:
   verify:
     name: Verfiy
-    runs-on: Akka-Default
+    runs-on: Akka-Default-Latest
     if: github.event.repository.fork == false
     steps:
       - name: Checkout

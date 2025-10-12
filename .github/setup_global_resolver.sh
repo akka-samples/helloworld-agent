@@ -8,6 +8,8 @@ set -euo pipefail
 # --- Configuration ---
 AKKA_RESOLVER_URL='https://repo.akka.io/maven/github_actions'
 SBT_RESOLVER_LINE="resolvers += \"Akka library repository\" at \"$AKKA_RESOLVER_URL\""
+
+SBT_PLUGIN_PROJECT_NAME="${1:-}"
 # Uses GITHUB_WORKSPACE (set by the runner) or defaults to the current directory if run locally
 SBT_SCRIPTED_TESTS_BASE_DIR="${GITHUB_WORKSPACE:-.}/${SBT_PLUGIN_PROJECT_NAME}/src/sbt-test"
 

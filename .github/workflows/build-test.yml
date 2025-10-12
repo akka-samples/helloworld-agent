@@ -50,7 +50,9 @@ jobs:
           path: scripts
 
       - name: Setup global resolver
-        run: ./scripts/setup_global_resolver.sh
+        run: |
+          chmod +x ./scripts/setup_global_resolver.sh
+          ./scripts/setup_global_resolver.sh
 
       - name: mvn verify
         run: |-
